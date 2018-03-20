@@ -1,7 +1,8 @@
 version: '2.1'
 services:
    d1:
-    image: tenforce/virtuoso:1.3.1-virtuoso7.2.4
+    image: tenforce/virtuoso:1.3.1-virtuoso7.2.2
+    container_name: d1original
     environment:
      SPARQL_UPDATE: "true"
      DEFAULT_GRAPH: "http://www.linkedsensordataD1.com/D1-graph"
@@ -11,7 +12,8 @@ services:
      - "8890:8890"
 
    d2:
-    image: tenforce/virtuoso:1.3.1-virtuoso7.2.4
+    image: tenforce/virtuoso:1.3.1-virtuoso7.2.2
+    container_name: d2original
     environment:
      SPARQL_UPDATE: "true"
      DEFAULT_GRAPH: "http://www.linkedsensordataD2.com/D2-graph"
@@ -21,7 +23,8 @@ services:
      - "8891:8890"
 
    d3:
-    image: tenforce/virtuoso:1.3.1-virtuoso7.2.4
+    image: tenforce/virtuoso:1.3.1-virtuoso7.2.2
+    container_name: d3original
     environment:
      SPARQL_UPDATE: "true"
      DEFAULT_GRAPH: "http://www.linkedsensordataD3.com/D3-graph"
